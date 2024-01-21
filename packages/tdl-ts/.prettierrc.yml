@@ -1,0 +1,10 @@
+trailingComma: all
+semi: true
+singleQuote: true
+arrowParens: avoid
+printWidth: 100
+tabWidth: 2
+useTabs: false
+bracketSpacing: true
+bracketSameLine: false
+embeddedLanguageFormatting: off

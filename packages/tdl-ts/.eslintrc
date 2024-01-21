@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "import",
+    "editorconfig",
+    "@stylistic/ts"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:editorconfig/all"
+  ],
+  "ignorePatterns": [
+    "/bin/",
+    "/lib/",
+    "/out/"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/no-explicit-any": ["warn"],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/no-var-requires": "error",
+    // https://github.com/microsoft/TypeScript/issues/18433
+    "no-restricted-globals": [
+      "error",
+      "closed",
+      "event",
+      "fdescribe",
+      "length",
+      "location",
+      "name",
+      "parent",
+      "top"
+    ],
+    "simple-import-sort/imports": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages"
+    ],
+    "import/no-unresolved": "off",
+    "editorconfig/indent": "off"
+    // "editorconfig/indent": ["error", { "ignoredNodes": ["PropertyDefinition"] }]
+  }
+}

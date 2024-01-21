@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "exclude": [
+    "node_modules/",
+    "src/**/*.node"
+  ],
+  "jsc": {
+    "target": "esnext",
+    "paths": {
+      "*/index.js": ["*", "/index.js"]
+    },
+    "baseUrl": "./src/",
+    "parser": {
+      "syntax": "typescript",
+      "decorators": true,
+      "dynamicImport": true,
+      "dts": true
+    },
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true
+    },
+    "experimental": {
+      "plugins": [
+        [
+          "@swc/plugin-transform-imports",
+          {
+            "^(.*?)(\\.ts)$": {
+              "skipDefaultConversion": true,
+              "transform": "{{matches.[1]}}.js"
+            }
+          }
+        ]
+      ]
+    }
+  },
+  "module": {
+    "type": "nodenext"
+  }
+}

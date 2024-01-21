@@ -1,0 +1,62 @@
+{
+  "exclude": [ "node_modules" ],
+  "include": [ "src/**/*.ts", "tsup.config.ts" ],
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+    "allowSyntheticDefaultImports": true,
+
+    /* Projects */
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+
+    /* Language and Environment */
+    "target": "ESNext",
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "useDefineForClassFields": true,
+    "moduleDetection": "auto",
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+
+    /* Emit */
+    "rootDir": "src",
+    "outDir": "dist",
+    "downlevelIteration": false,
+    "noEmitOnError": true,
+    "noEmit": true,
+    "isolatedModules": true,
+
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "declaration": true,
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictNullChecks": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitOverride": true,
+
+    /* Imports */
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+
+    /* Cleaning */
+    "allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+
+    /* Completeness */
+    "skipLibCheck": false,
+
+    /* Debugging */
+    "sourceMap": true,
+
+    "lib": [ "ESNext" ],
+    "types": [ "node" ],
+  },
+}
